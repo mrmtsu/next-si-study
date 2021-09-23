@@ -1,8 +1,5 @@
 import styles from "../styles/Home.module.css";
-
-type HeadLineTitle = {
-  page: string;
-};
+import { HeadLineTitle } from "../types/type";
 
 export const Headline = (props: HeadLineTitle) => {
   return (
@@ -10,8 +7,7 @@ export const Headline = (props: HeadLineTitle) => {
       <h1 className={styles.title}>{props.page} page</h1>
 
       <p className={styles.description}>
-        Get started by editing{" "}
-        <code className={styles.code}>pages/{props.page}.js</code>
+        Get started by editing {props.children}
       </p>
     </div>
   );
